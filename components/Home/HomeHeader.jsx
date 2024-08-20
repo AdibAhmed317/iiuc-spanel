@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import tw from '../lib/tailwind';
-import bg from '../assets/images/icon.jpg';
+import tw from '../../lib/tailwind';
+import bg from '../../assets/images/icon.jpg';
+import { useNavigation } from 'expo-router';
 
 const HomeHeader = () => {
+  const navigation = useNavigation();
+
   return (
     <>
       <View
@@ -19,7 +21,7 @@ const HomeHeader = () => {
             <Text style={tw`text-xl text-white`}>Example </Text>
           </View>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
           <AntDesign name='menufold' color='white' size={20} />
         </TouchableOpacity>
       </View>
