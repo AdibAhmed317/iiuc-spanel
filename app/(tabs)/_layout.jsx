@@ -7,11 +7,10 @@ import {
 } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import { Text, View, Platform } from 'react-native';
-import HomeHeader from '../../components/HomeHeader';
 import tw from '../../lib/tailwind';
 
 const TabsLayout = () => {
-  const tabBarHeight = Platform.OS === 'ios' ? 80 : 60;
+  const tabBarHeight = Platform.OS === 'ios' ? 90 : 60;
 
   return (
     <>
@@ -79,7 +78,7 @@ const TabsLayout = () => {
         <Tabs.Screen
           name='home'
           options={{
-            header: () => <HomeHeader />,
+            headerShown: false,
           }}
         />
         <Tabs.Screen

@@ -7,6 +7,7 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import tw from '../../lib/tailwind';
@@ -21,9 +22,14 @@ const SignIn = () => {
     email: '',
     password: '',
   });
+  const [loading, setLoading] = useState(true);
 
   const handleForgotPassword = () => {
     console.log('Forgot password pressed');
+  };
+
+  const handleImageLoad = () => {
+    setLoading(false);
   };
 
   return (
@@ -80,10 +86,12 @@ const SignIn = () => {
             </View>
           </View>
           <View style={tw`mt-auto shadow-lg`}>
+            {loading && <ActivityIndicator size='large' color='#000000' />}
             <Image
               style={tw`h-60 w-full rounded-t-[3rem]`}
               source={bg}
               resizeMode='cover'
+              onLoad={handleImageLoad}
             />
           </View>
         </ScrollView>

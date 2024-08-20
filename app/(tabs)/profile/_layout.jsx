@@ -13,7 +13,7 @@ const Profile = () => {
 
   return (
     <>
-      <StatusBar backgroundColor='#313477' barStyle='dark-content' />
+      <StatusBar barStyle='dark-content' />
       <SafeAreaView style={{ flex: 1 }}>
         <View
           style={{
@@ -61,7 +61,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-{
-  /* <StatusBar backgroundColor='#313477' barStyle='dark-content' /> */
-}
