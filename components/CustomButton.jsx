@@ -1,6 +1,6 @@
 import { TouchableOpacity, Text } from 'react-native';
 import React from 'react';
-import tw from 'twrnc';
+import tw from '../lib/tailwind';
 
 const CustomButton = ({
   title,

@@ -12,7 +12,7 @@ const HomeHeader = () => {
   return (
     <>
       <View
-        style={tw`flex-row items-center justify-between p-4 bg-primaryBlue pt-20 rounded-b-md`}
+        style={tw`flex-row items-center justify-between p-4 bg-primaryBlue pt-10 rounded-b-md`}
       >
         <View style={tw`flex flex-row justify-center items-center`}>
           <Image source={bg} style={tw`h-10 w-10 rounded-full`} />
