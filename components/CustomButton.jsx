@@ -18,7 +18,7 @@ const CustomButton = ({
         isLoading ? 'opacity-0' : ''
       }`}
     >
-      <Text style={tw`${textStyles} font-bold text-sm`}>{title}</Text>
+      <Text style={tw`${textStyles}`}>{title}</Text>
     </TouchableOpacity>
   );
 };

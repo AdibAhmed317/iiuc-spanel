@@ -33,7 +33,7 @@ const SignIn = () => {
   };
 
   return (
-    <SafeAreaView style={tw`flex-1`}>
+    <SafeAreaView style={tw`flex-1 bg-white`}>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={tw`flex-1`}
@@ -85,7 +85,7 @@ const SignIn = () => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={tw`mt-auto shadow-lg`}>
+          <View style={tw`mt-auto shadow-2xl shadow-blue-800`}>
             {loading && <ActivityIndicator size='large' color='#000000' />}
             <Image
               style={tw`h-60 w-full rounded-t-[3rem]`}
