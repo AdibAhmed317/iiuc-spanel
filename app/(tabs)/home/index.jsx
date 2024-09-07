@@ -3,12 +3,13 @@ import React from 'react';
 import HomeHeader from '../../../components/Home/HomeHeader';
 import tw from '../../../lib/tailwind';
 import ButtonGroup from '../../../components/Home/CustomQuickButton';
+import DailyClass from '../../../components/Home/daily-class';
 
 const Home = () => {
   return (
     <>
       <StatusBar barStyle='light-content' />
-      <ScrollView contentContainerStyle={{ height: '100%' }}>
+      <ScrollView style={tw`flex-1 bg-white`}>
         <HomeHeader />
         <View style={tw`flex flex-row justify-between`}>
           <View
@@ -37,7 +38,13 @@ const Home = () => {
           </View>
         </View>
         <View>
-          <Text style={tw`px-4 text-3xl my-5 font-light`}>Quick Action</Text>
+          <Text style={tw`px-4 text-xl my-5 font-normal`}>
+            Today's Class Schedule
+          </Text>
+          <DailyClass />
+        </View>
+        <View>
+          <Text style={tw`px-4 text-xl my-5 font-normal`}>Quick Action</Text>
           <ButtonGroup />
         </View>
       </ScrollView>

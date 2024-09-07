@@ -85,7 +85,7 @@ const SignIn = () => {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={tw`mt-auto shadow-2xl shadow-blue-800`}>
+          <View style={tw`mt-auto`}>
             {loading && <ActivityIndicator size='large' color='#000000' />}
             <Image
               style={tw`h-60 w-full rounded-t-[3rem]`}

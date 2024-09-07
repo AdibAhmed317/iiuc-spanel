@@ -53,7 +53,7 @@ const CustomDrawerContent = (props) => {
   );
 
   return (
-    <DrawerContentScrollView {...props} style={tw`flex-1`}>
+    <DrawerContentScrollView {...props} style={tw`flex-1 bg-white`}>
       {/* Profile Header */}
       <View style={tw`p-4 border-b border-gray-100`}>
         <Image
