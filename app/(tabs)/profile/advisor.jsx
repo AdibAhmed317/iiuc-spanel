@@ -3,7 +3,7 @@ import tw from '../../../lib/tailwind';
 
 const Advisor = () => {
   return (
-    <View style={tw`flex-1 px-4 bg-gray-100 justify-center items-center`}>
+    <View style={tw`flex-1 px-4 justify-center items-center bg-white`}>
       <View
         style={tw`relative h-[45%] w-full max-w-[20rem] bg-white rounded-2xl overflow-hidden shadow-lg`}
       >

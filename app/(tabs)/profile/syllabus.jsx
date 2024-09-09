@@ -59,7 +59,7 @@ const Syllabus = () => {
   );
 
   return (
-    <View style={tw`px-4`}>
+    <View style={tw`px-4 bg-white`}>
       <FlatList
         data={courses}
         renderItem={renderItem}

@@ -4,7 +4,7 @@ import tw from '../../../lib/tailwind';
 
 const Contact = () => {
   return (
-    <View style={tw`px-4`}>
+    <View style={tw`px-4 bg-white h-full`}>
       <ScrollView style={tw`mt-4 w-full`}>
         <View style={tw`w-full border border-gray-200 rounded`}>
           <View style={tw`flex flex-row border-b border-gray-200`}>

@@ -4,7 +4,7 @@ import avatar from '../../../assets/images/icon.jpg';
 
 const Overview = () => {
   return (
-    <View style={tw`px-4`}>
+    <View style={tw`px-4 bg-white h-full`}>
       <View style={tw`flex justify-center items-center mt-5`}>
         <Image
           style={tw`h-48 w-48 rounded-full`}

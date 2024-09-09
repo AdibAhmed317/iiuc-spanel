@@ -43,7 +43,7 @@ const Notice = () => {
   return (
     <>
       <StatusBar barStyle='dark-content' />
-      <SafeAreaView style={tw`flex-1 bg-gray-100`}>
+      <SafeAreaView style={tw`flex-1 bg-white`}>
         <View style={tw`py-4`}>
           <Text style={tw`text-center text-primaryBlue text-2xl font-semibold`}>
             University Notices

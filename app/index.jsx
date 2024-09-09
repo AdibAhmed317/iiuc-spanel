@@ -21,9 +21,7 @@
         - Library Access
         - Helpdesk/Support
     Grades/Academics
-        - Result
-        - Syllabus
-        - Registration 
+        - Result View
         - TER
     Profile
         - Registration No
@@ -49,8 +47,9 @@ const index = () => {
   const redirect = true;
   if (redirect) {
     return <Redirect href='/home' />;
+  } else {
+    return <Redirect href='/sign-in' />;
   }
-  return <></>;
 };
 
 export default index;
