@@ -1,6 +1,6 @@
 import { View, Text, ScrollView } from 'react-native';
 
-import tw from '../../../lib/tailwind';
+import tw from '@lib/tailwind';
 
 const Contact = () => {
   return (

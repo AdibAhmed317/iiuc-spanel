@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import tw from '../../lib/tailwind';
+import tw from '@lib/tailwind';
 
 const notices = [
   {

@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
-import React from 'react';
-import tw from '../../lib/tailwind';
+
+import tw from '@lib/tailwind';
 
 const DailyClass = () => {
   const currentDate = new Date();

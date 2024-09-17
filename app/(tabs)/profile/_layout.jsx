@@ -2,10 +2,10 @@ import { Platform, SafeAreaView, StatusBar, View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import Overview from './overview';
-import Contact from './contact';
-import Advisor from './advisor';
-import Syllabus from './syllabus';
+import Overview from '@app/(tabs)/profile/overview';
+import Contact from '@app/(tabs)/profile/contact';
+import Advisor from '@app/(tabs)/profile/advisor';
+import Syllabus from '@app/(tabs)/profile/syllabus';
 
 const Tab = createMaterialTopTabNavigator();
 

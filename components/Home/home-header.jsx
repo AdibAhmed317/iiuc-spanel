@@ -1,10 +1,11 @@
-import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import tw from '../../lib/tailwind';
-import bg from '../../assets/images/icon.jpg';
 import { useNavigation } from 'expo-router';
+
+import tw from '@lib/tailwind';
+
+import AntDesign from '@expo/vector-icons/AntDesign';
+
+import bg from '@assets/images/icon.jpg';
 
 const HomeHeader = () => {
   const navigation = useNavigation();

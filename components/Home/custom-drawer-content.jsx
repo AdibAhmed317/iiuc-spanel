@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
-import { AntDesign } from '@expo/vector-icons';
-import tw from '../../lib/tailwind';
 import { router } from 'expo-router';
+
+import tw from '@lib/tailwind';
+import { AntDesign } from '@expo/vector-icons';
 
 const CustomDrawerContent = (props) => {
   const [expandedMenus, setExpandedMenus] = useState({

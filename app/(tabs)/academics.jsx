@@ -1,10 +1,10 @@
 import { View, Text, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import tw from '../../lib/tailwind';
+import tw from '@lib/tailwind';
 
-import CustomButton from '../../components/custom-button';
-import CourseCard from '../../components/academics/course-card';
+import CustomButton from '@components/custom-button';
+import CourseCard from '@components/academics/course-card';
 
 const Academics = () => {
   return (

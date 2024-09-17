@@ -1,33 +1,12 @@
-import React, { useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
-import tw from '../../lib/tailwind';
-import CustomButton from '../custom-button';
+import { View } from 'react-native';
+
+import tw from '@lib/tailwind';
+import { currentOption, graduateOption } from '@assets/data/btn-data';
+
+import CustomButton from '@components/custom-button';
 
 const ButtonGroup = () => {
-  const [currentStudent, setCurrentStudent] = useState(true);
-
-  const graduateOption = [
-    'Registration Summary',
-    'Payment History',
-    'Clearance Form',
-    'Payment Slip',
-    'Course Status',
-    'Profile',
-    'Result View',
-    'Password',
-  ];
-
-  const currentOption = [
-    'Class Routine',
-    'Payment History',
-    'Payment Slip',
-    'Result View',
-    'Submit Supervisor for Thesis/Project',
-    'Course Status',
-    'Siblings',
-    'Submit Thesis/Project Proposal',
-    'Password',
-  ];
+  const currentStudent = true;
 
   const buttonsToDisplay = currentStudent ? currentOption : graduateOption;
 

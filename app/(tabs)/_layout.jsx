@@ -7,7 +7,7 @@ import {
 import { Tabs } from 'expo-router';
 import { Text, View, Platform } from 'react-native';
 
-import tw from '../../lib/tailwind';
+import tw from '@lib/tailwind';
 
 const TabsLayout = () => {
   const tabBarHeight = Platform.OS === 'ios' ? 90 : 60;

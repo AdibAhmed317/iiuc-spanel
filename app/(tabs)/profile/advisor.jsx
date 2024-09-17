@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-import tw from '../../../lib/tailwind';
+import tw from '@lib/tailwind';
 
 const Advisor = () => {
   return (

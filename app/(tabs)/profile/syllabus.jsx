@@ -1,7 +1,8 @@
 import { View, Text, FlatList } from 'react-native';
 
-import tw from '../../../lib/tailwind';
-import { courses } from '../../../assets/data/syllabus';
+import tw from '@lib/tailwind';
+
+import { courses } from '@assets/data/syllabus';
 
 const Syllabus = () => {
   // Render item function for FlatList

@@ -12,12 +12,12 @@ import {
 import { Link, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import tw from '../../lib/tailwind';
+import tw from '@lib/tailwind';
 
-import FormField from '../../components/form-field';
-import CustomButton from '../../components/custom-button';
-import bg from '../../assets/images/sign-in.jpg';
-import logo from '../../assets/images/iconT.png';
+import FormField from '@components/form-field';
+import CustomButton from '@components/custom-button';
+import bg from '@assets/images/sign-in.jpg';
+import logo from '@assets/images/iconT.png';
 
 const SignIn = () => {
   const [form, setForm] = useState({
