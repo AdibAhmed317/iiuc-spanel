@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FontAwesome,
   Foundation,
@@ -7,6 +6,7 @@ import {
 } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import { Text, View, Platform } from 'react-native';
+
 import tw from '../../lib/tailwind';
 
 const TabsLayout = () => {

@@ -1,6 +1,7 @@
 import { Platform, SafeAreaView, StatusBar, View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 import Overview from './overview';
 import Contact from './contact';
 import Advisor from './advisor';

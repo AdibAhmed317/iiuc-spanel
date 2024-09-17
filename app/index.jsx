@@ -38,9 +38,16 @@
     Setting 
         - Update user information
     Logout
+
+
+    - Login 
+    - Syllabus
+    - Registration
+        - Show offered course
+    - Application Submission
+    - 
 */
 
-import React from 'react';
 import { Redirect } from 'expo-router';
 
 const index = () => {

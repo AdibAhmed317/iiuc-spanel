@@ -5,8 +5,9 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import tw from '../../lib/tailwind';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import tw from '../../lib/tailwind';
 
 const notices = [
   {

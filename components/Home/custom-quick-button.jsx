@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import tw from '../../lib/tailwind';
-import CustomButton from '../../components/CustomButton';
+import CustomButton from '../custom-button';
 
 const ButtonGroup = () => {
   const [currentStudent, setCurrentStudent] = useState(true);
@@ -18,17 +18,12 @@ const ButtonGroup = () => {
   ];
 
   const currentOption = [
-    'Course Registration',
-    'Add/Drop',
-    'Withdraw',
     'Class Routine',
     'Payment History',
     'Payment Slip',
-    'Registration Summary',
     'Result View',
     'Submit Supervisor for Thesis/Project',
     'Course Status',
-    'TER',
     'Siblings',
     'Submit Thesis/Project Proposal',
     'Password',

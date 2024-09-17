@@ -1,7 +1,7 @@
-import React from 'react';
-import { Drawer } from 'expo-router/drawer';
 import { StatusBar } from 'react-native';
-import CustomDrawerContent from '../../../components/Home/CustomDrawerContent';
+import { Drawer } from 'expo-router/drawer';
+
+import CustomDrawerContent from '../../../components/home/custom-drawer-content';
 
 const DashboardLayout = () => {
   return (

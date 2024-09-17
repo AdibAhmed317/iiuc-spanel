@@ -1,9 +1,10 @@
 import { View, Text, StatusBar, ScrollView } from 'react-native';
-import React from 'react';
-import HomeHeader from '../../../components/Home/HomeHeader';
+
 import tw from '../../../lib/tailwind';
-import ButtonGroup from '../../../components/Home/CustomQuickButton';
-import DailyClass from '../../../components/Home/daily-class';
+
+import HomeHeader from '../../../components/home/home-header';
+import ButtonGroup from '../../../components/home/custom-quick-button';
+import DailyClass from '../../../components/home/daily-class';
 
 const Home = () => {
   return (
