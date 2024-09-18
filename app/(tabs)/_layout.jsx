@@ -19,8 +19,6 @@ const TabsLayout = () => {
           tabBarStyle: {
             display: 'flex',
             height: tabBarHeight,
-            borderTopLeftRadius: 5,
-            borderTopRightRadius: 5,
             backgroundColor: '#313477',
             position: 'absolute',
             elevation: 0,

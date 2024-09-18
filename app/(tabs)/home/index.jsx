@@ -38,12 +38,12 @@ const Home = () => {
             </View>
           </View>
         </View>
-        <View>
+        {/* <View>
           <Text style={tw`px-4 text-xl my-5 font-normal`}>
             Today's Class Schedule
           </Text>
           <DailyClass />
-        </View>
+        </View> */}
         <View>
           <Text style={tw`px-4 text-xl my-5 font-normal`}>Quick Action</Text>
           <ButtonGroup />

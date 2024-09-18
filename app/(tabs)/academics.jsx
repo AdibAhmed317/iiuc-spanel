@@ -47,14 +47,55 @@ const Academics = () => {
               />
             </View>
           </View>
-          <View style={tw`mb-6`}>
+          <View>
             <Text style={tw`text-xl my-5 font-normal`}>Current Courses</Text>
-            <View style={tw``}>
-              <CourseCard />
+            <View>
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
+              <CourseCard
+                courseName='Database'
+                courseCode='ABC-123'
+                creditHour='3'
+                section='A'
+                subSection='Male'
+              />
             </View>
           </View>
 
-          <View style={tw`mb-6`}>
+          {/* <View style={tw`mb-6`}>
             <Text style={tw`text-xl my-5 font-normal`}>Class Schedule</Text>
             <ScrollView
               horizontal={true}
@@ -76,9 +117,9 @@ const Academics = () => {
                 <Text style={tw`text-sm text-gray-600`}>Room: DN102</Text>
               </View>
             </ScrollView>
-          </View>
+          </View> */}
 
-          <View style={tw`mb-6`}>
+          {/* <View style={tw`mb-6`}>
             <Text style={tw`text-xl my-5 font-normal`}>Grades</Text>
             <View style={tw`bg-gray-100 p-4 mb-4 rounded-lg shadow-md`}>
               <Text style={tw`font-bold text-base`}>Algorithms</Text>
@@ -88,7 +129,7 @@ const Academics = () => {
               <Text style={tw`font-bold text-base`}>Advanced Database</Text>
               <Text style={tw`text-sm text-gray-600`}>Grade: 78%</Text>
             </View>
-          </View>
+          </View> */}
         </ScrollView>
       </SafeAreaView>
     </>
