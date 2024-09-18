@@ -18,12 +18,12 @@ const FormField = ({
 
   return (
     <View style={tw`${otherStyle} my-2`}>
-      <Text style={tw`text-base text-primaryBlue font-medium`}>{title}</Text>
+      <Text style={tw`text-sm text-primaryBlue font-medium`}>{title}</Text>
       <View
-        style={tw`w-full h-12 border-2 border-gray-50 rounded-lg px-4 bg-black/5 focus:border-blue-900 items-center flex-row`}
+        style={tw`w-full h-12 border-[0.8px] border-black/15 rounded-lg px-4 bg-black/5 focus:border-blue-900 items-center flex-row`}
       >
         <TextInput
-          style={tw`flex-1 w-full h-full text-black font-semibold text-base`}
+          style={tw`flex-1 w-full h-full text-black font-semibold text-sm`}
           value={value}
           placeholder={placeholder}
           placeholderTextColor='#93959b'

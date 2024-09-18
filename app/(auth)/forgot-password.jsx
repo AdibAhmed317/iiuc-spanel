@@ -5,11 +5,11 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   Image,
-  TouchableOpacity,
   Platform,
   ActivityIndicator,
   StatusBar,
   Dimensions,
+  Alert,
 } from 'react-native';
 import { Link, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -22,7 +22,7 @@ import bg from '@assets/images/sign-in.jpg';
 
 const { height } = Dimensions.get('window');
 
-const SignIn = () => {
+const ForgotPassword = () => {
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -80,7 +80,7 @@ const SignIn = () => {
 
           <View style={tw`flex-1 bg-white -mt-10 rounded-t-[3rem] px-6 pt-8`}>
             <Text style={tw`text-3xl font-light text-primaryBlue mb-6`}>
-              Signin
+              Reset Password
             </Text>
             <FormField
               title='ID'
@@ -90,27 +90,26 @@ const SignIn = () => {
               placeholder='Enter Student ID'
             />
             <FormField
-              title='Password'
-              value={form.password}
-              handleChangeText={(e) => setForm({ ...form, password: e })}
+              title='Phone'
+              value={form.email}
+              handleChangeText={(e) => setForm({ ...form, email: e })}
               otherStyle='mt-4 text-primaryBlue p-2'
-              placeholder='Enter Password'
-              secureTextEntry={true}
+              placeholder='Enter Phone Number'
             />
             <CustomButton
-              title='LOGIN'
+              title='SUBMIT'
               containerStyles='bg-green-500 mt-6'
               handlePress={() => {
-                router.push('/verification');
+                Alert.alert('Password Reset');
               }}
               textStyles='text-white font-semibold'
             />
             <View style={tw`flex-row justify-center items-center mt-3`}>
               <Link
-                href='/forgot-password'
+                href='/sign-in'
                 style={tw`text-sm font-light text-blue-500 mx-1`}
               >
-                Forgot Password?
+                Sign In
               </Link>
             </View>
           </View>
@@ -127,4 +126,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPassword;

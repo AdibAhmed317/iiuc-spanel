@@ -51,7 +51,7 @@
 import { Redirect } from 'expo-router';
 
 const index = () => {
-  const redirect = true;
+  const redirect = false;
   if (redirect) {
     return <Redirect href='/home' />;
   } else {
