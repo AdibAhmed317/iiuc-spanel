@@ -51,8 +51,8 @@
 import { Redirect } from 'expo-router';
 
 const index = () => {
-  const redirect = false;
-  if (redirect) {
+  const isLoggedIn = false;
+  if (isLoggedIn) {
     return <Redirect href='/home' />;
   } else {
     return <Redirect href='/sign-in' />;
