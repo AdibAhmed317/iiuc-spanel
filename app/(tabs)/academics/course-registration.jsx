@@ -1,19 +1,113 @@
+import { View, Text, FlatList } from 'react-native';
+
 import tw from '@lib/tailwind';
-import { View, Text } from 'react-native';
-import { Table, Row, Rows } from 'react-native-table-component';
+import { courses } from '@assets/data/syllabus';
 
 const CourseRegistration = () => {
-  const tableHead = ['Head1', 'Head2', 'Head3', 'Head4'];
-  const tableData = [
-    ['1', '2', '3', '4'],
-    ['a', 'b', 'c', 'd'],
-  ];
+  const headerComponent = () => (
+    <View style={tw`flex flex-row border-b border-gray-200`}>
+      <Text
+        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        SL
+      </Text>
+      <Text
+        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        Course Code
+      </Text>
+      <Text
+        style={tw`flex-3 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        Course Title
+      </Text>
+      <Text
+        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        C.H
+      </Text>
+      <Text
+        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        Semester
+      </Text>
+      <Text style={tw`flex-1 p-2 text-center font-semibold`}>Pre. R</Text>
+    </View>
+  );
+
+  const renderItem = ({ item }) => (
+    <View style={tw`flex flex-row border-b border-gray-200`}>
+      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+        {item.sl}
+      </Text>
+      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+        {item.code}
+      </Text>
+      <Text style={tw`flex-3 p-2 text-center border-r border-gray-200`}>
+        {item.title}
+      </Text>
+      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+        {item.ch}
+      </Text>
+      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+        {item.semester}
+      </Text>
+      <Text style={tw`flex-1 p-2 text-center`}>{item.prereq}</Text>
+    </View>
+  );
 
   return (
-    <Table>
-      <Row data={tableHead} textStyle={tw`text-center font-bold`} />
-      <Rows data={tableData} textStyle={tw`text-center`} />
-    </Table>
+    <View style={tw`px-4 py-14 bg-white`}>
+      <View>
+        <Text>
+          <Text style={tw`font-bold`}>Matric No: </Text>
+          <Text>C123123</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>Name: </Text>
+          <Text>Example Ahmed</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>Semester Name: </Text>
+          <Text>Autumn-2024</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>Registration No: </Text>
+          <Text>0062110005101055</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>GPA: 1.954 and Max CH: </Text>
+          <Text>
+            Regular: 15, Additional:0 and Retake: 2 Course (Max 6 Credit)
+          </Text>
+        </Text>
+      </View>
+      <View style={tw`mt-5 mb-2`}>
+        <Text>
+          <Text style={tw`font-bold`}>Department: </Text>
+          <Text>Computer Science and Engineering</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>Programm: </Text>
+          <Text>Bachelor Program</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>Semester Number: </Text>
+          <Text>Eighth Semester</Text>
+        </Text>
+        <Text>
+          <Text style={tw`font-bold`}>First Installment: </Text>
+          <Text> 0, Payment Not Clear</Text>
+        </Text>
+      </View>
+      <FlatList
+        data={courses}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.sl}
+        ListHeaderComponent={headerComponent}
+        contentContainerStyle={tw`mt-5 mb-80 w-full pb-80`}
+      />
+    </View>
   );
 };
 
