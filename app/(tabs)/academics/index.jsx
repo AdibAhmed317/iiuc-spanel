@@ -22,7 +22,7 @@ const Academics = () => {
                 <CustomButton
                   key={key}
                   title={item.title}
-                  containerStyles='bg-green-50 border border-gray-300 rounded-lg px-4 py-2 m-1 shadow-md'
+                  containerStyles='bg-green-50 border border-gray-300 rounded-lg px-4 py-2 m-1 shadow-md h-[50px]'
                   textStyles='text-primaryGreen font-semibold text-xs'
                   handlePress={() => router.push(`${item.route}`)}
                 />

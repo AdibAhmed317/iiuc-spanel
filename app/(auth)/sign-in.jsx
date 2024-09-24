@@ -99,7 +99,7 @@ const SignIn = () => {
             />
             <CustomButton
               title='LOGIN'
-              containerStyles='bg-green-500 mt-6'
+              containerStyles='bg-green-500 mt-6 h-[50px] mx-2'
               handlePress={() => {
                 router.push('/verification');
               }}

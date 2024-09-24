@@ -98,7 +98,7 @@ const ForgotPassword = () => {
             />
             <CustomButton
               title='SUBMIT'
-              containerStyles='bg-green-500 mt-6'
+              containerStyles='bg-green-500 mt-6 h-[50px] mx-2'
               handlePress={() => {
                 Alert.alert('Password Reset');
               }}

@@ -11,6 +11,10 @@ const AcademicsLayout = () => {
           name='course-registration'
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name='registration-summary'
+          options={{ headerShown: false }}
+        />
       </Stack>
     </>
   );

@@ -1,64 +1,72 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, ScrollView } from 'react-native';
 
 import tw from '@lib/tailwind';
 import { courses } from '@assets/data/syllabus';
+import { courseRegistration } from '@assets/data/dummyData';
+import CustomButton from '@components/custom-button';
 
 const CourseRegistration = () => {
   const headerComponent = () => (
     <View style={tw`flex flex-row border-b border-gray-200`}>
       <Text
-        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+        style={tw`w-12 p-2 text-center font-semibold border-r border-gray-200`}
       >
         SL
       </Text>
       <Text
-        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+        style={tw`w-32 p-2 text-center font-semibold border-r border-gray-200`}
       >
         Course Code
       </Text>
       <Text
-        style={tw`flex-3 p-2 text-center font-semibold border-r border-gray-200`}
+        style={tw`w-40 p-2 text-center font-semibold border-r border-gray-200`}
       >
-        Course Title
+        Course Name
       </Text>
       <Text
-        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+        style={tw`w-20 p-2 text-center font-semibold border-r border-gray-200`}
       >
-        C.H
+        C. H.
       </Text>
       <Text
-        style={tw`flex-1 p-2 text-center font-semibold border-r border-gray-200`}
+        style={tw`w-20 p-2 text-center font-semibold border-r border-gray-200`}
       >
-        Semester
+        Section
       </Text>
-      <Text style={tw`flex-1 p-2 text-center font-semibold`}>Pre. R</Text>
+      <Text
+        style={tw`w-20 p-2 text-center font-semibold border-r border-gray-200`}
+      >
+        Sub Section
+      </Text>
     </View>
   );
 
   const renderItem = ({ item }) => (
-    <View style={tw`flex flex-row border-b border-gray-200`}>
-      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+    <View style={tw`flex flex-row border-b border-gray-200 `}>
+      <Text style={tw`w-12 p-2 text-center border-r border-gray-200`}>
         {item.sl}
       </Text>
-      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
-        {item.code}
+      <Text style={tw`w-32 p-2 text-center border-r border-gray-200`}>
+        {item.courseCode}
       </Text>
-      <Text style={tw`flex-3 p-2 text-center border-r border-gray-200`}>
-        {item.title}
+      <Text style={tw`w-40 p-2 text-center border-r border-gray-200`}>
+        {item.courseName}
       </Text>
-      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
+      <Text style={tw`w-20 p-2 text-center border-r border-gray-200`}>
         {item.ch}
       </Text>
-      <Text style={tw`flex-1 p-2 text-center border-r border-gray-200`}>
-        {item.semester}
+      <Text style={tw`w-20 p-2 text-center border-r border-gray-200`}>
+        {item.section}
       </Text>
-      <Text style={tw`flex-1 p-2 text-center`}>{item.prereq}</Text>
+      <Text style={tw`w-20 p-2 text-center border-r border-gray-200`}>
+        {item.subSection}
+      </Text>
     </View>
   );
 
   return (
     <View style={tw`px-4 py-14 bg-white`}>
-      <View>
+      <View style={tw`bg-blue-50 p-2 rounded-xl`}>
         <Text>
           <Text style={tw`font-bold`}>Matric No: </Text>
           <Text>C123123</Text>
@@ -82,7 +90,7 @@ const CourseRegistration = () => {
           </Text>
         </Text>
       </View>
-      <View style={tw`mt-5 mb-2`}>
+      <View style={tw`mt-5 mb-2 bg-blue-50 p-2 rounded-xl`}>
         <Text>
           <Text style={tw`font-bold`}>Department: </Text>
           <Text>Computer Science and Engineering</Text>
@@ -100,13 +108,17 @@ const CourseRegistration = () => {
           <Text> 0, Payment Not Clear</Text>
         </Text>
       </View>
-      <FlatList
-        data={courses}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.sl}
-        ListHeaderComponent={headerComponent}
-        contentContainerStyle={tw`mt-5 mb-80 w-full pb-80`}
-      />
+      <ScrollView horizontal>
+        <View style={tw`w-full`}>
+          <FlatList
+            data={courseRegistration}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.sl}
+            ListHeaderComponent={headerComponent}
+            contentContainerStyle={tw`mt-5 mb-80 w-full pb-80`}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 };

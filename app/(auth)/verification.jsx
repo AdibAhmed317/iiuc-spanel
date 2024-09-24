@@ -91,7 +91,7 @@ const Verification = () => {
             />
             <CustomButton
               title='SUBMIT'
-              containerStyles='bg-green-500 mt-2 mx-2'
+              containerStyles='bg-green-500 mt-2 h-[50px] mx-2'
               handlePress={() => {
                 router.push('/home');
               }}
