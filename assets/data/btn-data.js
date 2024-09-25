@@ -72,6 +72,7 @@ export const menuItems = [
     title: 'Students',
     key: 'students',
     subItems: [
+      { label: 'Pre Registration', route: 'academics/pre-registration' },
       { label: 'Payment History', route: 'home/payment-history' },
       {
         label: 'Print Course Registration',

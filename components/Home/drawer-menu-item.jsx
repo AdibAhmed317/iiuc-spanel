@@ -1,58 +1,39 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+
 import { AntDesign } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import tw from '@lib/tailwind';
 
-const DrawerMenuItem = ({ title, menuKey, subItems } = []) => {
-  const [expandedMenus, setExpandedMenus] = useState({
-    students: false,
-    application: false,
-    iqac: false,
-    others: false,
-    setting: false,
-  });
-
-  const toggleMenu = (menuKey) => {
-    setExpandedMenus((prevState) => ({
-      ...prevState,
-      [menuKey]: !prevState[menuKey],
-    }));
-  };
-
+const DrawerMenuItem = ({ title, subItems, isExpanded, onToggleExpand }) => {
   return (
-    <>
+    <View style={tw`mb-4`}>
       <TouchableOpacity
-        style={tw`p-4 border-b border-gray-100 flex-row justify-between items-center`}
-        onPress={() => toggleMenu(menuKey)}
+        style={tw`flex-row justify-between items-center p-3 bg-slate-50 rounded-md`}
+        onPress={onToggleExpand}
       >
-        <Text style={tw`text-sm`}>{title}</Text>
+        <Text style={tw`text-sm text-gray-800 font-medium`}>{title}</Text>
         <AntDesign
-          name={expandedMenus[menuKey] ? 'up' : 'down'}
+          name={isExpanded ? 'up' : 'down'}
           size={16}
-          color='black'
+          color='gray'
+          style={tw`ml-2`}
         />
       </TouchableOpacity>
-      {expandedMenus[menuKey] && (
-        <View style={tw`pl-8`}>
-          {subItems.length > 0 ? (
-            subItems.map((item, index) => (
-              <TouchableOpacity
-                key={index}
-                style={tw`p-2`}
-                onPress={() => router.push(item.route)}
-              >
-                <Text style={tw`text-xs`}>{item.label}</Text>
-              </TouchableOpacity>
-            ))
-          ) : (
-            <Text style={tw`text-xs p-2 text-gray-500`}>
-              No items available
-            </Text>
-          )}
+
+      {isExpanded && (
+        <View style={tw`pl-6 mt-2`}>
+          {subItems.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              style={tw`py-2`}
+              onPress={() => router.push(item.route)}
+            >
+              <Text style={tw`text-gray-600`}>{item.label}</Text>
+            </TouchableOpacity>
+          ))}
         </View>
       )}
-    </>
+    </View>
   );
 };
 
