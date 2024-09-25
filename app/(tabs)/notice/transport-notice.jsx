@@ -1,13 +1,11 @@
+import tw from '@lib/tailwind';
 import {
   View,
   Text,
-  FlatList,
   TouchableOpacity,
   StatusBar,
+  FlatList,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-
-import tw from '@lib/tailwind';
 
 const notices = [
   {
@@ -32,7 +30,7 @@ const notices = [
   },
 ];
 
-const Notice = () => {
+const TransportNotice = () => {
   const renderNotice = ({ item }) => (
     <TouchableOpacity style={tw`p-4 mb-3 bg-white rounded-lg shadow-md`}>
       <Text style={tw`text-lg font-semibold mb-1`}>{item.title}</Text>
@@ -44,21 +42,15 @@ const Notice = () => {
   return (
     <>
       <StatusBar barStyle='dark-content' />
-      <SafeAreaView style={tw`flex-1 bg-white`}>
-        <View style={tw`py-4`}>
-          <Text style={tw`text-center text-primaryBlue text-2xl font-semibold`}>
-            University Notices
-          </Text>
-        </View>
-        <FlatList
-          data={notices}
-          renderItem={renderNotice}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={tw`p-4`}
-        />
-      </SafeAreaView>
+      <FlatList
+        style={tw`bg-white`}
+        data={notices}
+        renderItem={renderNotice}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={tw`p-4`}
+      />
     </>
   );
 };
 
-export default Notice;
+export default TransportNotice;

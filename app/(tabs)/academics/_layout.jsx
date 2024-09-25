@@ -15,6 +15,11 @@ const AcademicsLayout = () => {
           name='registration-summary'
           options={{ headerShown: false }}
         />
+        <Stack.Screen name='ter' options={{ headerShown: false }} />
+        <Stack.Screen name='add-drop' options={{ headerShown: false }} />
+        <Stack.Screen name='course-status' options={{ headerShown: false }} />
+        <Stack.Screen name='withdraw' options={{ headerShown: false }} />
+        <Stack.Screen name='result-view' options={{ headerShown: false }} />
       </Stack>
     </>
   );
