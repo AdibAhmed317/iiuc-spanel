@@ -4,7 +4,7 @@ import tw from '@lib/tailwind';
 
 import HomeHeader from '@components/home/home-header';
 import ButtonGroup from '@components/home/custom-quick-button';
-import DailyClass from '@components/home/daily-class';
+// import DailyClass from '@components/home/daily-class';
 
 const Home = () => {
   return (
@@ -80,10 +80,12 @@ const Home = () => {
 export default Home;
 
 {
-  /* <View>
+  /* 
+      <View>
           <Text style={tw`px-4 text-xl my-5 font-normal`}>
             Today's Class Schedule
           </Text>
           <DailyClass />
-        </View> */
+      </View> 
+  */
 }
