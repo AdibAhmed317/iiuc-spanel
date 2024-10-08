@@ -19,7 +19,7 @@ const NoticeLayout = () => {
         <View
           style={{
             flex: 1,
-            marginTop: Platform.OS === 'android' ? insets.top : 0,
+            // marginTop: Platform.OS === 'android' ? insets.top : 0,
           }}
         >
           <Tab.Navigator

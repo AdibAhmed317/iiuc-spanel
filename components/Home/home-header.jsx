@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Platform } from 'react-native';
 import { useNavigation } from 'expo-router';
 
 import tw from '@lib/tailwind';
@@ -13,7 +13,10 @@ const HomeHeader = () => {
   return (
     <>
       <View
-        style={tw`flex-row items-center justify-between p-4 bg-primaryBlue pt-10`}
+        style={[
+          tw`flex-row items-center justify-between p-4 bg-primaryBlue`,
+          { paddingTop: Platform.OS === 'android' ? 40 : 70 },
+        ]}
       >
         <View style={tw`flex flex-row justify-center items-center`}>
           <Image source={bg} style={tw`h-10 w-10 rounded-full`} />
