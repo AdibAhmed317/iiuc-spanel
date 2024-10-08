@@ -6,7 +6,7 @@ const Advisor = () => {
   return (
     <View style={tw`flex-1 px-4 justify-center items-center bg-white`}>
       <View
-        style={tw`relative h-[45%] w-full max-w-[20rem] bg-white rounded-2xl overflow-hidden shadow-lg`}
+        style={tw`w-full max-w-[20rem] bg-white rounded-2xl shadow-xl pb-10`}
       >
         <View style={tw`relative pt-16 px-8`}>
           <Text style={tw`text-3xl font-bold text-gray-800 mb-2`}>
