@@ -705,3 +705,49 @@ export const courseStatusPendingMissing = [
     status: 'Failed',
   },
 ];
+
+export const notices = [
+  {
+    id: '1',
+    title: 'Holiday Notice',
+    description:
+      'The university will be closed on August 25th for a national holiday.',
+    date: '2024-08-20',
+  },
+  {
+    id: '2',
+    title: 'Exam Schedule',
+    description:
+      'The exam schedule for the Fall semester has been released. Please check the official website.',
+    date: '2024-08-18',
+  },
+  {
+    id: '3',
+    title: 'Library Hours',
+    description: 'The library will have extended hours during the exam period.',
+    date: '2024-08-15',
+  },
+];
+
+export const transportNotices = [
+  {
+    id: '1',
+    title: 'Holiday Notice',
+    description:
+      'The university will be closed on August 25th for a national holiday.',
+    date: '2024-08-20',
+  },
+  {
+    id: '2',
+    title: 'Exam Schedule',
+    description:
+      'The exam schedule for the Fall semester has been released. Please check the official website.',
+    date: '2024-08-18',
+  },
+  {
+    id: '3',
+    title: 'Library Hours',
+    description: 'The library will have extended hours during the exam period.',
+    date: '2024-08-15',
+  },
+];
