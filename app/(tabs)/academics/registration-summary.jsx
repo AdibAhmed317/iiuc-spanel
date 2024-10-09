@@ -1,8 +1,8 @@
 import { View, Text, FlatList, ScrollView } from 'react-native';
-import React from 'react';
-import { registrationSummary } from '@assets/data/dummyData';
-import tw from '@lib/tailwind';
+
 import CustomButton from '@components/custom-button';
+import tw from '@lib/tailwind';
+import { registrationSummary } from '@assets/data/dummyData';
 
 const RegistrationSummary = () => {
   const headerComponent = () => (

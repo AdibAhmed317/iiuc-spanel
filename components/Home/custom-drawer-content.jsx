@@ -52,11 +52,11 @@ import {
 } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { router } from 'expo-router';
+
 import tw from '@lib/tailwind';
-import { AntDesign } from '@expo/vector-icons';
-import { menuItems } from '@assets/data/btn-data';
 import CustomButton from '@components/custom-button';
-import DrawerMenuItem from './drawer-menu-item';
+import DrawerMenuItem from '@components/home/drawer-menu-item';
+import { menuItems } from '@assets/data/btn-data';
 
 const CustomDrawerContent = (props) => {
   const [expandedMenu, setExpandedMenu] = useState(null);

@@ -1,7 +1,6 @@
 import { View, Text, FlatList } from 'react-native';
 
 import tw from '@lib/tailwind';
-
 import { courses } from '@assets/data/syllabus';
 
 const Syllabus = () => {

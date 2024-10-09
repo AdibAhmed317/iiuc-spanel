@@ -1,13 +1,12 @@
 import { View, Text, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
-import tw from '@lib/tailwind';
+import { router } from 'expo-router';
 
 import CustomButton from '@components/custom-button';
 import CourseCard from '@components/academics/course-card';
+import tw from '@lib/tailwind';
 import { courseRegistrationOption } from '@assets/data/btn-data';
 import { demoCurrentCourse } from '@assets/data/dummyData';
-import { router } from 'expo-router';
 
 const Academics = () => {
   return (

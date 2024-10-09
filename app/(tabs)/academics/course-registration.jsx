@@ -1,9 +1,9 @@
 import { View, Text, FlatList, ScrollView } from 'react-native';
 
+import CustomButton from '@components/custom-button';
 import tw from '@lib/tailwind';
 import { courses } from '@assets/data/syllabus';
 import { courseRegistration } from '@assets/data/dummyData';
-import CustomButton from '@components/custom-button';
 
 const CourseRegistration = () => {
   const headerComponent = () => (

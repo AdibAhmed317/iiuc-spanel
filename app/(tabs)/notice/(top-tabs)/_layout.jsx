@@ -1,12 +1,12 @@
 import { View, Text, StatusBar, Platform } from 'react-native';
-import React from 'react';
 import {
   SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 import Notice from '@app/(tabs)/notice/(top-tabs)/index';
-import TransportNotice from './transport-notice';
+import TransportNotice from '@app/(tabs)/notice/(top-tabs)/transport-notice';
 
 const Tab = createMaterialTopTabNavigator();
 

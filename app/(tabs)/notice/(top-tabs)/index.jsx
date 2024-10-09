@@ -1,16 +1,8 @@
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  StatusBar,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { FlatList, StatusBar } from 'react-native';
 
+import NoticeCard from '@components/notice/notice-card';
 import tw from '@lib/tailwind';
 import { notices } from '@assets/data/dummyData';
-import { router } from 'expo-router';
-import NoticeCard from '@components/notice/notice-card';
 
 const Notice = () => {
   return (

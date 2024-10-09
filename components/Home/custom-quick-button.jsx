@@ -1,10 +1,9 @@
 import { View } from 'react-native';
+import { router } from 'expo-router';
 
 import tw from '@lib/tailwind';
-import { currentOption, graduateOption } from '@assets/data/btn-data';
-
 import CustomButton from '@components/custom-button';
-import { router } from 'expo-router';
+import { currentOption, graduateOption } from '@assets/data/btn-data';
 
 const ButtonGroup = () => {
   const currentStudent = true;

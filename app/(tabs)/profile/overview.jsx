@@ -1,7 +1,6 @@
 import { View, Text, Image, ScrollView } from 'react-native';
 
 import tw from '@lib/tailwind';
-
 import avatar from '@assets/images/icon.jpg';
 
 const Overview = () => {
