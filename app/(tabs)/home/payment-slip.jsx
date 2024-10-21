@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, FlatList } from 'react-native';
-import { transactions } from '@assets/data/btn-data';
 import CustomButton from '@components/custom-button';
 import tw from '@lib/tailwind';
+import { transactions } from '@assets/data/dummyData';
 
 const PaymentSlip = () => {
   const headerComponent = () => (
@@ -99,7 +99,7 @@ const PaymentSlip = () => {
           <FlatList
             data={transactions}
             renderItem={renderItem}
-            keyExtractor={(item) => item.sl}
+            keyExtractor={(item) => item.id}
             ListHeaderComponent={headerComponent}
             contentContainerStyle={tw`mt-5 mb-80 pb-80`}
           />

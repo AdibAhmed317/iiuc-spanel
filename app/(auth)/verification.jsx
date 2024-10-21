@@ -92,7 +92,7 @@ const Verification = () => {
               title='SUBMIT'
               containerStyles='bg-green-500 mt-2 h-[50px] mx-2'
               handlePress={() => {
-                router.push('/home');
+                router.replace('/home');
               }}
               textStyles='text-white font-semibold'
             />

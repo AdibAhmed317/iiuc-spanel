@@ -2,6 +2,7 @@ import { StatusBar } from 'react-native';
 import { Drawer } from 'expo-router/drawer';
 
 import CustomDrawerContent from '@components/home/custom-drawer-content';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const DashboardLayout = () => {
   return (
