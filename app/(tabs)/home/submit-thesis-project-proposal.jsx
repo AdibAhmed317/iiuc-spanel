@@ -17,8 +17,41 @@ const SubmitThesisProjectProposal = () => {
   const [openSupervisor, setOpenSupervisor] = useState(false);
   const [valueSupervisor, setValueSupervisor] = useState(null);
   const [itemsSupervisor, setItemsSupervisor] = useState([
-    { label: 'Dr. John Doe', value: 'dr_john_doe' },
-    { label: 'Dr. Jane Smith', value: 'dr_jane_smith' },
+    {
+      label: 'Dr. John Doe',
+      value: 'dr_john_doe',
+      department: 'Computer Science',
+    },
+    {
+      label: 'Dr. Jane Smith',
+      value: 'dr_jane_smith',
+      department: 'Electrical Engineering',
+    },
+    {
+      label: 'Dr. Alice Johnson',
+      value: 'dr_alice_johnson',
+      department: 'Mechanical Engineering',
+    },
+    {
+      label: 'Dr. Bob Williams',
+      value: 'dr_bob_williams',
+      department: 'Computer Science',
+    },
+    {
+      label: 'Dr. Carol Brown',
+      value: 'dr_carol_brown',
+      department: 'Civil Engineering',
+    },
+    {
+      label: 'Dr. David Lee',
+      value: 'dr_david_lee',
+      department: 'Computer Science',
+    },
+    {
+      label: 'Dr. Emily Chen',
+      value: 'dr_emily_chen',
+      department: 'Electrical Engineering',
+    },
   ]);
 
   const [openCoSupervisor, setOpenCoSupervisor] = useState(false);

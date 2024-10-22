@@ -874,3 +874,64 @@ export const transactions = [
     amount: 45000,
   },
 ];
+
+export const supervisors = [
+  {
+    label: 'Dr. John Doe',
+    value: 'dr_john_doe',
+    department: 'Computer Science',
+  },
+  {
+    label: 'Dr. Jane Smith',
+    value: 'dr_jane_smith',
+    department: 'Electrical Engineering',
+  },
+  {
+    label: 'Dr. Alice Johnson',
+    value: 'dr_alice_johnson',
+    department: 'Mechanical Engineering',
+  },
+  {
+    label: 'Dr. Bob Williams',
+    value: 'dr_bob_williams',
+    department: 'Computer Science',
+  },
+  {
+    label: 'Dr. Carol Brown',
+    value: 'dr_carol_brown',
+    department: 'Civil Engineering',
+  },
+  {
+    label: 'Dr. David Lee',
+    value: 'dr_david_lee',
+    department: 'Computer Science',
+  },
+  {
+    label: 'Dr. Emily Chen',
+    value: 'dr_emily_chen',
+    department: 'Electrical Engineering',
+  },
+];
+
+export const coSupervisors = [
+  {
+    label: 'Prof. Adam Lee',
+    value: 'prof_adam_lee',
+    department: 'Computer Science',
+  },
+  {
+    label: 'Prof. Lisa Ray',
+    value: 'prof_lisa_ray',
+    department: 'Mechanical Engineering',
+  },
+  {
+    label: 'Prof. Mark Taylor',
+    value: 'prof_mark_taylor',
+    department: 'Civil Engineering',
+  },
+  {
+    label: 'Prof. Sarah White',
+    value: 'prof_sarah_white',
+    department: 'Electrical Engineering',
+  },
+];
