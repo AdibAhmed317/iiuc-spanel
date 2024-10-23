@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "iiuc-spanel",
+    "name": "IIUC Student Panel",
     "slug": "iiuc-spanel",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,11 +22,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.adib317.iiucspanel"
     },
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "53595d1b-5838-4ec9-892e-5b0e5790ba61"
+      }
     }
   }
 }
