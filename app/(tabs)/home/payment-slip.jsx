@@ -1,7 +1,15 @@
-import { View, Text, ScrollView, FlatList } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import CustomButton from '@components/custom-button';
 import tw from '@lib/tailwind';
 import { transactions } from '@assets/data/dummyData';
+import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 const PaymentSlip = () => {
   const headerComponent = () => (
@@ -95,7 +103,16 @@ const PaymentSlip = () => {
   return (
     <View style={tw`flex-1 bg-white`}>
       <ScrollView horizontal>
-        <View style={tw`w-full mt-10`}>
+        <View style={tw`w-full mt-10 px-4`}>
+          <TouchableOpacity
+            style={tw`my-3`}
+            onPress={() => router.push('/home')}
+          >
+            <View style={tw`flex flex-row justify-start items-center`}>
+              <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+              <Text style={tw`text-primaryBlue`}>Go Back</Text>
+            </View>
+          </TouchableOpacity>
           <FlatList
             data={transactions}
             renderItem={renderItem}

@@ -1,8 +1,10 @@
 import CustomButton from '@components/custom-button';
 import FormField from '@components/form-field';
+import { Ionicons } from '@expo/vector-icons';
 import tw from '@lib/tailwind';
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
 import {
   View,
   Text,
@@ -67,13 +69,21 @@ const SubmitThesisProjectProposal = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       keyboardVerticalOffset={Platform.OS === 'ios' ? 64 : 0}
     >
+      <TouchableOpacity
+        style={tw`pt-10 px-4`}
+        onPress={() => router.push('/home')}
+      >
+        <View style={tw`flex flex-row justify-start items-center`}>
+          <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+          <Text style={tw`text-primaryBlue`}>Go Back</Text>
+        </View>
+      </TouchableOpacity>
       <View style={tw`flex-1 pt-10 px-4`}>
         <Text style={tw`text-xl text-black/80 mb-2 text-center`}>
           Submit Supervisor/Co-Supervisor for Thesis/Project
         </Text>
 
         <View style={tw`z-50`}>
-          {/* Supervisor Dropdown */}
           <View style={tw`my-2 w-full`}>
             <Text style={tw`text-lg text-black mb-2`}>Select Supervisor</Text>
             <DropDownPicker

@@ -1,8 +1,16 @@
-import { View, Text, FlatList, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 
 import CustomButton from '@components/custom-button';
 import tw from '@lib/tailwind';
 import { registrationSummary } from '@assets/data/dummyData';
+import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 const RegistrationSummary = () => {
   const headerComponent = () => (
@@ -137,8 +145,17 @@ const RegistrationSummary = () => {
 
   return (
     <View style={tw`flex-1 bg-white`}>
+      <TouchableOpacity
+        style={tw`pt-10 px-4`}
+        onPress={() => router.push('/academics')}
+      >
+        <View style={tw`flex flex-row justify-start items-center`}>
+          <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+          <Text style={tw`text-primaryBlue`}>Go Back</Text>
+        </View>
+      </TouchableOpacity>
       <ScrollView horizontal>
-        <View style={tw`w-full mt-10`}>
+        <View style={tw`w-full mt-1 px-4`}>
           <FlatList
             data={registrationSummary}
             renderItem={renderItem}

@@ -4,6 +4,9 @@ import CustomButton from '@components/custom-button';
 import tw from '@lib/tailwind';
 import { courses } from '@assets/data/syllabus';
 import { courseRegistration } from '@assets/data/dummyData';
+import { TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 const CourseRegistration = () => {
   const headerComponent = () => (
@@ -66,6 +69,15 @@ const CourseRegistration = () => {
 
   return (
     <View style={tw`px-4 py-14 bg-white`}>
+      <TouchableOpacity
+        style={tw`mb-3`}
+        onPress={() => router.push('/academics')}
+      >
+        <View style={tw`flex flex-row justify-start items-center`}>
+          <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+          <Text style={tw`text-primaryBlue`}>Go Back</Text>
+        </View>
+      </TouchableOpacity>
       <View style={tw`bg-blue-50 p-2 rounded-xl`}>
         <Text>
           <Text style={tw`font-bold`}>Matric No: </Text>

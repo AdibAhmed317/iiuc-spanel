@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import CustomButton from '@components/custom-button';
 import FormField from '@components/form-field';
-import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import tw from '@lib/tailwind';
 import { coSupervisors, supervisors } from '@assets/data/dummyData';
@@ -138,7 +138,16 @@ const SubmitSupervisorThesisProject = () => {
           showsVerticalScrollIndicator={false}
           bounces={true}
         >
-          <Text style={tw`text-2xl font-bold text-black/80 mb-6 text-center`}>
+          <TouchableOpacity
+            style={tw`my-1`}
+            onPress={() => router.push('/home')}
+          >
+            <View style={tw`flex flex-row justify-start items-center`}>
+              <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+              <Text style={tw`text-primaryBlue`}>Go Back</Text>
+            </View>
+          </TouchableOpacity>
+          <Text style={tw`text-2xl font-bold text-black/80 mb-6`}>
             Thesis Project Supervision
           </Text>
 

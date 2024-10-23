@@ -19,6 +19,9 @@ import {
   courseStatusUpcoming,
   courseStatusWaiting,
 } from '@assets/data/dummyData';
+import { TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 const CourseStatus = () => {
   const headerComponent = () => (
@@ -73,7 +76,16 @@ const CourseStatus = () => {
 
   return (
     <ScrollView style={tw`bg-white flex-1 px-4`}>
-      <View style={tw`bg-blue-50 p-2 rounded-xl mt-14`}>
+      <TouchableOpacity
+        style={tw`pt-10`}
+        onPress={() => router.push('/academics')}
+      >
+        <View style={tw`flex flex-row justify-start items-center`}>
+          <Ionicons name='chevron-back-outline' size={24} color='#313477' />
+          <Text style={tw`text-primaryBlue`}>Go Back</Text>
+        </View>
+      </TouchableOpacity>
+      <View style={tw`bg-blue-50 p-2 rounded-xl mt-5`}>
         <Text>
           <Text style={tw`font-bold`}>Matric No: </Text>
           <Text>C123123</Text>
