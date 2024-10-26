@@ -16,7 +16,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "UIViewControllerBasedStatusBarAppearance": false
-      }
+      },
+      "bundleIdentifier": "com.adib317.iiucspanel"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +26,9 @@
       },
       "package": "com.adib317.iiucspanel"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router"
+    ],
     "experiments": {
       "typedRoutes": true
     },
